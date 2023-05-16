@@ -7,40 +7,40 @@
             'description' => 'Hotel Belvedere Descrizione',
             'parking' => true,
             'vote' => 4,
-            'distance_to_center' => 10.4
+            'distance_to_center' => 10.4.'km'
         ],
         [
             'name' => 'Hotel Futuro',
             'description' => 'Hotel Futuro Descrizione',
             'parking' => true,
             'vote' => 2,
-            'distance_to_center' => 2
+            'distance_to_center' => 2..'km'
         ],
         [
             'name' => 'Hotel Rivamare',
             'description' => 'Hotel Rivamare Descrizione',
             'parking' => false,
             'vote' => 1,
-            'distance_to_center' => 1
+            'distance_to_center' => 1..'km'
         ],
         [
             'name' => 'Hotel Bellavista',
             'description' => 'Hotel Bellavista Descrizione',
             'parking' => false,
             'vote' => 5,
-            'distance_to_center' => 5.5
+            'distance_to_center' => 5.5.'km'
         ],
         [
             'name' => 'Hotel Milano',
             'description' => 'Hotel Milano Descrizione',
             'parking' => true,
             'vote' => 2,
-            'distance_to_center' => 50
+            'distance_to_center' => 50..'km'
         ],
 
     ];
 
-    var_dump( $hotels); 
+    // var_dump( $hotels); 
 
 ?>
 
@@ -62,7 +62,7 @@
 
     <tr>
       <?php foreach ($hotels[0] as $key => $value ): ?>
-      <th scope="col">
+      <th>
         <?php echo $key?>
       </th>
       <?php endforeach; ?>
@@ -73,15 +73,15 @@
 
     <tr>
       <?php foreach ($hotels as $hotel) : ?>
-      <?php foreach ($hotel as $value) : ?>
+      <?php foreach ($hotel as $value) : ?> 
     
       <td>
         <?php echo $value?> 
       </td>
 
       <?php endforeach; ?>
-      <?php endforeach; ?>
     </tr>
+    <?php endforeach; ?>
 
   </tbody>
 </table>
