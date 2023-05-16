@@ -57,15 +57,34 @@
 
 <h1>Hotels</h1>
 
-<ul>
-<?php foreach($hotels as $hotel): ?>
+<table class="table">
+  <thead>
 
-<li>
-  <?php echo $hotel ?>
-</li>
+    <tr>
+      <?php foreach ($hotels[0] as $key => $value ): ?>
+      <th scope="col">
+        <?php echo $key?>
+      </th>
+      <?php endforeach; ?>
+    </tr>
 
-<?php endforeach; ?>
-</ul>
+  </thead>
+  <tbody>
+
+    <tr>
+      <?php foreach ($hotels as $hotel) : ?>
+      <?php foreach ($hotel as $value) : ?>
+    
+      <td>
+        <?php echo $value?> 
+      </td>
+
+      <?php endforeach; ?>
+      <?php endforeach; ?>
+    </tr>
+
+  </tbody>
+</table>
   
 </body>
 </html>
